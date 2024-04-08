@@ -1,0 +1,19 @@
+  {
+    "routes": [
+      { "src": "/(.*)", "dest": "/" }
+    ],
+    "builds": [
+      { "src": "index.js", "use": "@vercel/node" }
+    ],
+    "env": {
+      "DB_URL": "mongodb+srv://root:easypassword123123@api.51hbchw.mongodb.net/?retryWrites=true&w=majority&appName=api",
+      "GITHUB_CLIENT_ID": "6a56bbf078867cf08a02",
+      "GITHUB_CLIENT_SECRET": "a557e5af6c4ddb19e841dcf390477bbe9b1d5659",
+      "GITHUB_CALLBACK_URL": "https://express-session-auth-app-3ssc.vercel.app/auth/github",
+      "JWT_ACCESS_SECRET_KEY": "jwt-access-secret",
+      "SESSION_SECRET": "secret-key",
+      "ALLOWED_ORIGIN": "https://express-session-auth-app-3ssc.vercel.app",
+      "PORT": 3001,
+      "BCRYPT_SALT": 10
+    }
+  }
