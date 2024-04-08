@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.ts",
   "type": "commonjs",
+  "engines": {
+    "node": "20.10.0"
+  },
   "scripts": {
     "start": "node dist/index.js",
     "build": "tsc",

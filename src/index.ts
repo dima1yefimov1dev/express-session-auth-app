@@ -18,7 +18,7 @@ const JwtStrategy = require('passport-jwt').Strategy;
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 7000;
+const PORT = +process.env.PORT || 7000;
 const DB = process.env.DB_URL;
 
 app.set('view engine', 'ejs');
