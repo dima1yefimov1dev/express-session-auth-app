@@ -14,6 +14,6 @@
       "SESSION_SECRET": "secret-key",
       "ALLOWED_ORIGIN": "https://express-session-auth-app-3ssc.vercel.app",
       "PORT": "3001",
-      "BCRYPT_SALT": 10
+      "BCRYPT_SALT": "10"
     }
   }
