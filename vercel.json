@@ -1,9 +1,12 @@
   {
-    "routes": [
-      { "src": "/(.*)", "dest": "/" }
-    ],
     "builds": [
-      { "src": "index.js", "use": "@vercel/node" }
+      {
+        "src": "index.ts",
+        "use": "@vercel/node"
+      }
+    ],
+    "rewrites": [
+      {"source": "/(.*)", "destination": "/"}
     ],
     "env": {
       "DB_URL": "mongodb+srv://root:easypassword123123@api.51hbchw.mongodb.net/?retryWrites=true&w=majority&appName=api",
