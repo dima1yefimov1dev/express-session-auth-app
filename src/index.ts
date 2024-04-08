@@ -24,13 +24,13 @@ const DB = process.env.DB_URL;
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(cors({
-  origin: 'http://localhost:3001',
+  origin: process.env.ALLOWED_ORIGIN,
   credentials: true
 }));
 app.use(helmet());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
-  secret: 'secret-key',
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: true,
 }));
@@ -43,9 +43,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 passport.use(new GitHubStrategy({
-  clientID: '6a56bbf078867cf08a02',
-  clientSecret: "a557e5af6c4ddb19e841dcf390477bbe9b1d5659",
-  callbackURL: "http://localhost:3001/auth/github"
+  clientID: process.env.GITHUB_CLIENT_ID,
+  clientSecret: process.env.GITHUB_CLIENT_SECRET,
+  callbackURL: process.env.GITHUB_CALLBACK_URL
 },
 
 function(accessToken, refreshToken, profile, cb) {
