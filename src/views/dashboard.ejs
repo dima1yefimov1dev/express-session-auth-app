@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="top-bar">
+        <h1>Welcome to Your Dashboard</h1>
+        <a class="homeBtn" href="/">Back home</a>
+    </div>
+    <div class="container">
+        <h2>Hello, <%= user.username %>!</h2>
+        <p>Your ID: <%= user.id %></p>
+        <p>Here you can add personalized content.</p>
+        <div class="box">
+          <a href="/auth/logout" class="btn">Log Out</a>
+        </div>
+    </div>
+</body>
+</html>
